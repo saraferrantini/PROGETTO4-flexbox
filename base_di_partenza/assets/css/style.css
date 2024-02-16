@@ -1,0 +1,269 @@
+/*☑️ FONT */
+body {
+  font-family: medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* ☑️ PRIMO BANNER */
+
+/* SPACE-BETWEEN per distribuire gli elementi figli lungo l'asse principale del contenitore flessibile */
+/* ALIGN-ITEMS: center;per assicurare che i contenuti all'interno del banner siano ancora allineati verticalmente al centro.  */
+/* Con POSITION-FIXIED FISSIAMO IL BANNER */
+
+.banner1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background: #ffc017;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; /* Assicura che il banner sia sovrapposto agli altri contenuti */
+  border-bottom: 1px solid black; /* Aggiungi un bordo superiore nero */
+  padding-top: 20px; /* Aggiungi spazio sopra il secondo banner per la linea di separazione */
+}
+
+.logo {
+  height: 38%;
+  margin-left: 124px;
+}
+
+/* ALIGN-CENTER: center per allineare verticalmente gli elementi figli all'interno del contenitore flessibile. */
+
+.menu {
+  display: flex;
+  align-items: center;
+  margin-right: 84px;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.get-started-btn {
+  background-color: #191919;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+  margin-left: 20px;
+}
+
+/* PER FAR CAMBIARE IL COLORE AL PRIMO BANNER */
+/* usiamo il selettore :hover per modificare lo stile del banner quando il mouse vi passa sopra.  */
+.banner1:hover {
+  background: white;
+  border-bottom-color: white;
+}
+
+.banner1:hover .menu a {
+  color: #ffc017; /* Cambia il colore del testo dei link al passaggio del mouse sul banner */
+}
+
+.banner1:hover .get-started-btn {
+  background-color: #1a8917; /* Cambia il colore di sfondo del bottone "Get Started" al passaggio del mouse sul banner */
+  color: black; /* Cambia il colore del testo del bottone "Get Started" al passaggio del mouse sul banner */
+}
+
+/* ☑️ SECONDO BANNER */
+.banner2 {
+  background-color: #ffc017;
+  border-bottom: 1px solid black; /* Aggiungi un bordo superiore nero */
+  padding-top: 20px; /* Aggiungi spazio sopra il secondo banner per la linea di separazione */
+
+  /* PROVA */
+  position: relative;
+  padding: 89px 19px;
+}
+
+/* STILE LETTERE M */
+.moving-letters {
+  position: absolute; /* Posizionamento assoluto rispetto al contenitore del secondo banner */
+  transform: translateY(-50%); /* Per posizionare verticalmente il div al centro del secondo banner */
+  right: 34px;
+  padding-bottom: 266px;
+}
+
+/* ----- */
+
+.banner2-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 124px;
+}
+
+.banner2-content h1 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-size: 100px;
+  margin-top: 82px;
+}
+
+.banner2-content p {
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+
+.start-reading-btn {
+  background-color: #191919;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+  padding: 9px 53px;
+  font-size: 19px;
+}
+
+h1,
+p,
+button {
+  margin-left: 10px;
+}
+
+p {
+  color: #191919;
+}
+
+/* ☑️ TERZO BANNER CON ARTICOLI ORIZZONTALI*/
+
+.banner3 {
+  background-color: white;
+  border-bottom: 1px solid rgba(142, 142, 142, 0.679);
+  padding-top: 20px;
+}
+
+.article-title h2 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.article-section {
+  padding: 50px 0;
+  margin-left: 142px;
+}
+
+.article-title {
+  display: flex;
+  align-items: center;
+}
+
+.small-logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.article-title h2 {
+  font-size: 24px;
+  color: #000;
+}
+
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.article {
+  width: calc(33.33% - 20px);
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.article-image {
+  width: auto;
+  height: 28px;
+  margin-right: 10px;
+}
+
+.round-image {
+  border-radius: 50%;
+}
+
+.article-content {
+  flex-grow: 1; /* Per far espandere il contenuto per occupare lo spazio disponibile */
+}
+
+.article h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.article-number {
+  font-size: 28px;
+  color: #ccc;
+  margin-right: 10px;
+  font-weight: bold;
+  margin-left: -7px;
+}
+
+/* QUARTO BANNER-ARTICOLI VERTICALI E STRISCIA SULLA DESTRA FISSA */
+
+/* banner contenitore */
+.footer-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 110px;
+  margin-top: 47px;
+}
+
+.author-info {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* foto autore */
+.author-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.author-details {
+  flex-grow: 1; /* Fai espandere questo blocco per occupare lo spazio disponibile */
+}
+
+/* titolo */
+.author-details h3 {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.article-image-square img {
+  width: auto;
+  height: 163px;
+  margin-left: 153px;
+}
+
+/* icona stella */
+.star-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}

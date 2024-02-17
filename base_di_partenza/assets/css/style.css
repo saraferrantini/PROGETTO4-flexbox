@@ -4,13 +4,13 @@ body {
     Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-/* ☑️ PRIMO BANNER */
+/* ☑️ PRIMO BOX*/
 
 /* SPACE-BETWEEN per distribuire gli elementi figli lungo l'asse principale del contenitore flessibile */
-/* ALIGN-ITEMS: center;per assicurare che i contenuti all'interno del banner siano ancora allineati verticalmente al centro.  */
-/* Con POSITION-FIXIED FISSIAMO IL BANNER */
+/* ALIGN-ITEMS: center;per assicurare che i contenuti all'interno del box siano ancora allineati verticalmente al centro.  */
+/* Con POSITION-FIXIED FISSIAMO IL box */
 
-.banner1 {
+.box1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,9 +21,9 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999; /* Assicura che il banner sia sovrapposto agli altri contenuti */
-  border-bottom: 1px solid black; /* Aggiungi un bordo superiore nero */
-  padding-top: 20px; /* Aggiungi spazio sopra il secondo banner per la linea di separazione */
+  z-index: 999; /* Assicura che il box sia sovrapposto agli altri contenuti */
+  border-bottom: 1px solid black;
+  padding-top: 20px;
 }
 
 .logo {
@@ -70,58 +70,50 @@ body {
   margin-left: 20px;
 }
 
-/* PER FAR CAMBIARE IL COLORE AL PRIMO BANNER */
-/* usiamo il selettore :hover per modificare lo stile del banner quando il mouse vi passa sopra.  */
-.banner1:hover {
-  background: white;
-  border-bottom-color: white;
+/* PER FAR CAMBIARE IL COLORE AL PRIMO BOX  E AL BOTTONE*/
+
+.cambiocolore {
+  background-color: white;
 }
 
-.banner1:hover .menu a {
-  color: #ffc017; /* Cambia il colore del testo dei link al passaggio del mouse sul banner */
+.cambiocoloreBottone {
+  background-color: green;
 }
 
-.banner1:hover .get-started-btn {
-  background-color: #1a8917; /* Cambia il colore di sfondo del bottone "Get Started" al passaggio del mouse sul banner */
-  color: black; /* Cambia il colore del testo del bottone "Get Started" al passaggio del mouse sul banner */
-}
-
-/* ☑️ SECONDO BANNER */
-.banner2 {
+/* ☑️ SECONDO BOX*/
+.box2 {
   background-color: #ffc017;
-  border-bottom: 1px solid black; /* Aggiungi un bordo superiore nero */
-  padding-top: 20px; /* Aggiungi spazio sopra il secondo banner per la linea di separazione */
-
-  /* PROVA */
+  border-bottom: 1px solid black;
+  padding-top: 20px;
   position: relative;
   padding: 89px 19px;
 }
 
 /* STILE LETTERE M */
 .moving-letters {
-  position: absolute; /* Posizionamento assoluto rispetto al contenitore del secondo banner */
-  transform: translateY(-50%); /* Per posizionare verticalmente il div al centro del secondo banner */
+  position: absolute; /* Posizionamento assoluto rispetto al contenitore del secondo box */
+  transform: translateY(-50%); /* Per posizionare verticalmente il div al centro del secondo box */
   right: 34px;
   padding-bottom: 266px;
 }
 
 /* ----- */
 
-.banner2-content {
+.box2-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-left: 124px;
 }
 
-.banner2-content h1 {
+.box2-content h1 {
   font-size: 36px;
   margin-bottom: 40px;
   font-size: 100px;
   margin-top: 82px;
 }
 
-.banner2-content p {
+.box2-content p {
   font-size: 22px;
   margin-bottom: 40px;
 }
@@ -147,9 +139,9 @@ p {
   color: #191919;
 }
 
-/* ☑️ TERZO BANNER CON ARTICOLI ORIZZONTALI*/
+/* ☑️ TERZO BOX CON ARTICOLI ORIZZONTALI*/
 
-.banner3 {
+.box3 {
   background-color: white;
   border-bottom: 1px solid rgba(142, 142, 142, 0.679);
   padding-top: 20px;
@@ -199,10 +191,6 @@ p {
   margin-right: 10px;
 }
 
-.round-image {
-  border-radius: 50%;
-}
-
 .article-content {
   flex-grow: 1; /* Per far espandere il contenuto per occupare lo spazio disponibile */
 }
@@ -220,50 +208,104 @@ p {
   margin-left: -7px;
 }
 
-/* ☑️ QUARTO BANNER-ARTICOLI VERTICALI E STRISCIA SULLA DESTRA FISSA */
+/* /☑️ QUARTO BOX - ARTICOLI INCOLONNATI E TOPICS*/
 
-/* banner contenitore */
-.footer-banner {
+.box4 {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 56px;
+}
+
+.box4-article {
+  flex: 0 0 57%;
+}
+
+.box4-topics {
+  flex: 0 0 20%;
+  width: 100%;
+  height: 250px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.box4-article-row {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  margin-left: 110px;
-  margin-top: 47px;
+  margin-bottom: 58px;
 }
 
-.author-info {
+.box4-author {
   display: flex;
-  align-items: flex-start;
-}
-
-/* foto autore */
-.author-image img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.author-details {
-  flex-grow: 1; /* Fai espandere questo blocco per occupare lo spazio disponibile */
-}
-
-/* titolo */
-.author-details h3 {
+  align-items: center; /* Allineo gli elementi verticalmente */
+  font-size: 11px;
   font-weight: bold;
-  font-size: 20px;
-  margin-top: 5px;
+  opacity: 0.8;
 }
 
-.article-image-square img {
-  width: auto;
-  height: 163px;
-  margin-left: 153px;
+.image-container {
+  margin-right: 10px; /* Aggiungo spazio tra l'immagine e il titolo */
 }
 
-/* icona stella */
-.star-icon {
-  width: 20px;
-  height: 20px;
-  margin-left: 5px;
+.round-image {
+  border-radius: 50%;
+  height: 31px;
+}
+
+.box4-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box4-article-row-image img {
+  height: 150px;
+  margin-left: 20px;
+}
+
+.box4-topics button {
+  background-color: white;
+  color: black;
+  padding: 9px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+/* TOPICS */
+.box4-topics-link {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.box4-topics-link a {
+  text-decoration: none;
+  color: black;
+  opacity: 0.6;
+}
+
+.box4-topics-buttons {
+  border-bottom: 1px solid black;
+  padding-top: 20px;
+  opacity: 0.6;
+}
+
+.box4-topics h2 {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.titolo {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.paragrafo {
+  margin-bottom: 5px;
+  opacity: 0.6;
+}
+
+.box4-icons-1 {
+  opacity: 0.6;
 }
